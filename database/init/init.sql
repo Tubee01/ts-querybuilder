@@ -10,7 +10,7 @@ CREATE TYPE attribute_type as ENUM (
 CREATE TABLE entity (
     id VARCHAR(36) PRIMARY KEY DEFAULT gen_random_uuid(),
     parent_id VARCHAR(36) REFERENCES entity(id),
-    name VARCHAR(255) UNIQUE NOT NULL,
+    name VARCHAR(255) UNIQUE NOT NULL
 );
 
 CREATE TABLE attribute (
